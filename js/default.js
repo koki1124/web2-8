@@ -17,8 +17,11 @@ var separate_time =function(time){
 }
 
 var now = new Date();
-var counter = separate_time(now);
+var target = new Date(1811,24,24,0,0,0,0);
+var diff = target.getTime() - now.getTime();
+var counter = separate_time(diff);
 document.getElementById('countdown').textContent =
+  '黒長のBIRTHDAYまで'+
   counter[5]+'年'+
   counter[4]+'月'+
   counter[3]+'日'+
