@@ -24,7 +24,7 @@ document.getElementById('countdown').textContent =
   counter[1]+'分'+
   counter[0]+'秒';
 refresh();//タイマー
-
+}
 var refresh = function(){
   setTimeout(update, 1000);
 }
