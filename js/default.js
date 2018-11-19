@@ -19,7 +19,7 @@ var target = new Date(2020,24,24,0,0,0,0);//日時指定
 var diff = target.getTime() - now.getTime();
 var counter = separate_time(diff);
 document.getElementById('countdown').textContent =
-  '黒長のBIRTHDAYまで'+
+  '世界滅亡まで'+
   counter[3]+'日'+
   counter[2]+'時'+
   counter[1]+'分'+
