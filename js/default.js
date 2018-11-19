@@ -15,7 +15,7 @@ var separate_time =function(time){
 }
 
 var now = new Date();
-var target = new Date(1811,24,24,0,0,0,0);//日時指定
+var target = new Date(2020,24,24,0,0,0,0);//日時指定
 var diff = target.getTime() - now.getTime();
 var counter = separate_time(diff);
 document.getElementById('countdown').textContent =
