@@ -13,6 +13,8 @@ var separate_time =function(time){
   var days =Math.floor(time / 1000 / 60 / 60 / 24);
   return [sec, min, hours, days];
 }
+
+var update = function(){
 var now = new Date();
 var target = new Date(2020,24,24,0,0,0,0);//日時指定
 var diff = target.getTime() - now.getTime();
