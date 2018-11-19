@@ -16,7 +16,7 @@ var separate_time =function(time){
   return [sec, min, hours, days, month, year];
 }
 
-var now = new date();
+var now = new Date();
 var counter = separate_time(now);
 document.getElementById('countdown').textContent =
   counter[5]+'年'+
