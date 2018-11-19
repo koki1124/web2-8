@@ -13,7 +13,6 @@ var separate_time =function(time){
   var days =Math.floor(time / 1000 / 60 / 60 / 24);
   return [sec, min, hours, days];
 }
-
 var now = new Date();
 var target = new Date(2020,24,24,0,0,0,0);//日時指定
 var diff = target.getTime() - now.getTime();
@@ -24,3 +23,9 @@ document.getElementById('countdown').textContent =
   counter[2]+'時'+
   counter[1]+'分'+
   counter[0]+'秒';
+refresh();//タイマー
+
+var refresh = function(){
+  setTimeout(update, 1000);
+}
+update();
