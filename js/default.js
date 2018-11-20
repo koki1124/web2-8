@@ -29,7 +29,7 @@ refresh();//タイマー
 var refresh = function(){
   setTimeout(update, 1000);
 }
-
+update();
 
 //画面移動
 function getFileName(){
@@ -43,10 +43,10 @@ if(filename === 'other.html'){
 }else{
   opt = document.querySelector('option[value="index.html"]');
 }
-opt.select = false;
+opt.select = true;
 
 document.getElementById('form').select.onchange = function(){
   location.href = document.getElementById('form').select.value;
 }
 
-update();
+
