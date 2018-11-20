@@ -82,4 +82,14 @@ function getCookie(c_name){
   }
   return "";
 }
+//cookie読み込んで表示
+var last_date = getCookie('lastDate');
+if(last_date){
+  document.getElementById('cookie').textContent = '前回訪れた時間:' + last_date;
+}else{
+  document.getElementById('cookie').textContent = '初めまして';
+}
+//新しい値の保存
+var current_time = new Date();
+setCookie('lastDate', current_time.toString(), 7);
 
