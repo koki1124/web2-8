@@ -67,7 +67,6 @@ function setCookie(c_name,value,expiredays){
   //cookie保存
   document.cookie=s;
 }
-
 //cokkieの値獲得
 function getCookie(c_name){
   var st="";
