@@ -1,4 +1,9 @@
-
+//繰り返し
+for(var i=1;i<11;i++){
+var li =document.createElement('li');
+li.textContent=i+'回';
+document.getElementById('list').appendChild(li);
+}
 
 //カウント
 var separate_time =function(time){
@@ -24,7 +29,7 @@ refresh();//タイマー
 var refresh = function(){
   setTimeout(update, 1000);
 }
-update();
+
 
 //画面移動
 function getFileName(){
@@ -43,3 +48,4 @@ opt.select = true;
 document.getElementById('form').select.onchange = function(){
   location.href = document.getElementById('form').select.value;
 }
+update();
