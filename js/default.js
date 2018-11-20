@@ -45,7 +45,7 @@ if(filename === 'other.html'){
 }
 opt.select = true;
 
-document.getElementById('form2').select.onchange = function(){
+document.getElementById('form').select.onchange = function(){
   location.href = document.getElementById('form').select.value;
 }
 
