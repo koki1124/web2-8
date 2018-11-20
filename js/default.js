@@ -32,5 +32,7 @@ var refresh = function(){
 update();
 
 //画面移動
-
+document.getElementById('form').select.onchange = function(){
+  location.href = document.getElementById('form').select.value;
+}
 
