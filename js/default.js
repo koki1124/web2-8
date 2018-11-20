@@ -1,3 +1,21 @@
+
+//画面移動
+function getFileName(){
+  return window.location.href.split('/').pop();
+}
+
+var filename = getFileName();
+var opt;
+if(filename === 'other.html'){
+  opt = document.querySelector('option[value="other.html"]');
+}else{
+  opt = document.querySelector('option[value="index.html"]');
+}
+opt.select = true;
+
+document.getElementById('form').select.onchange = function(){
+  location.href = document.getElementById('form').select.value;
+}
 if(filename === 'index.html'){
 //繰り返し
 for(var i=1;i<11;i++){
@@ -33,22 +51,5 @@ var refresh = function(){
 update();
 }
 
-//画面移動
-function getFileName(){
-  return window.location.href.split('/').pop();
-}
-
-var filename = getFileName();
-var opt;
-if(filename === 'other.html'){
-  opt = document.querySelector('option[value="other.html"]');
-}else{
-  opt = document.querySelector('option[value="index.html"]');
-}
-opt.select = true;
-
-document.getElementById('form').select.onchange = function(){
-  location.href = document.getElementById('form').select.value;
-}
 
 
