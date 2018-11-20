@@ -43,7 +43,7 @@ if(filename === 'other.html'){
 }else{
   opt = document.querySelector('option[value="index.html"]');
 }
-opt.select = true;
+opt.select = false;
 
 document.getElementById('form').select.onchange = function(){
   location.href = document.getElementById('form').select.value;
