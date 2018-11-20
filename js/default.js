@@ -96,3 +96,8 @@ setCookie('lastDate', current_time.toString(), 7);
 document.getElementById('remove_cookie').onsubmit = function(){
   setCookie('lastDate',"", 0);
 };
+
+//フォーム応答
+document.getElementById('form').onsubmit = function(){
+  window.alert('押されました');
+};
