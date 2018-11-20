@@ -1,4 +1,3 @@
-if(filename === 'index.html'){
 //繰り返し
 for(var i=1;i<11;i++){
 var li =document.createElement('li');
@@ -31,7 +30,7 @@ var refresh = function(){
   setTimeout(update, 1000);
 }
 update();
-}
+
 //画面移動
 function getFileName(){
   return window.location.href.split('/').pop();
