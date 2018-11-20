@@ -49,4 +49,38 @@ document.getElementById('form').select.onchange = function(){
   location.href = document.getElementById('form').select.value;
 }
 
+//cookie保存
+function setCookie(c_name,value,expiredays){
+  //期限日付
+  var extime = new Date().getTime();
+  var cltime = new Date(extime + (60*60*24*1000*expiredays));
+  var exdate = cltime.toUTCString();
+  //cookieに保存する文字列保存
+  var s="";
+  s += c_name +"="+ escape(value);
+  s += "; path="+ location.pathname;
+  if(expiredays){
+    s += "; expires=" +exdate+"; ";
+  }else{
+    s += "; ";
+  }
+  //cookie保存
+  document.cookie=s;
+}
+
+//cokkieの値獲得
+function getCookie(c_name){
+  var st="";
+  var ed="";
+  if(0 < document.cookie.length){
+    st=document.cookie.index0f(c_name + "=");
+    if(st!=-1){
+      st=st+c_name.length+1;
+      ed=document.cookie.index0f(";",st);
+      if(ed==-1) ed=document.cookie.length;
+      return unescape(document.cookie.substring(st,ed));
+    }
+  }
+  return "";
+}
 
