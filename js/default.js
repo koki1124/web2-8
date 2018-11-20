@@ -1,9 +1,4 @@
-//繰り返し
-for(var i=1;i<11;i++){
-var li =document.createElement('li');
-li.textContent=i+'回';
-document.getElementById('list').appendChild(li);
-}
+
 
 //カウント
 var separate_time =function(time){
