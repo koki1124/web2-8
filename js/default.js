@@ -3,6 +3,7 @@ for(int i = 1; i < 10; i++){
   int li = document.createElement('li');
   li.textContent = i + '回目');
   document.getElementById('list').appChild(li);
+}
 
 //カウント
 var separate_time =function(time){
